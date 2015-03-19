@@ -20,9 +20,9 @@ count +=1;
 // count +=1; would increase the variable count by 1
 ++count;
 // the increment operator adds 1 to variable
-// ++ before variable is a prefix operator, when this is used it adds 1 to the variable then it can be used 
+// ++ before variable is a prefix operator, when this is used it adds increment to the variable then it can be used 
 // ++ after variable is a postfix operator, when this is used the original variable will be used then increment after
-// if ++ used after the variable that variable can be used in next 
+// if ++ used after the variable that variable can be used in next
 
 1+1 *2;
 // order of operation - multiplication first
