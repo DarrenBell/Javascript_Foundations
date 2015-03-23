@@ -1,42 +1,91 @@
-5 + 5;
-// addition
-10 - 7;
-// subtraction
-3 * 4;
-// multiplication
-100 / 20;
-// division
-13 % 5;
-// % is the modulus operator, it returns the remainder of a division (answer = 3)
-var total = 10;
+// booleans are true or false values
+// operators
+// equals operator
+5 == 5;
+// true
+5 == 6;
+// false
+// not equals operator
+5 != 6;
+// true
+5 !=5;
+// false
+// greater than and less than operators
+6 > 5;
+// true
+5 < 4;
+// false
+// greater than can be combined with equals to
+5 >= 5;
+// true
+// can compare strings
+"rose" == "rose";
+// true
+"cat" == "dog";
+// false
+"cat" > "dog";
+// false - alphabetical comparison, dog is greater than cat as it comes after 'c', lowercase however beats uppercase
+if(someCondition) { // if true - only this will run if true
+	doThis(); // do this
+}
+else {
+	doThat(); // if false do this - only this will run if false
+}
+// if statement
+if(true) {
+	console.log("Hello World"); // will always evaluate to true
+}
+var userName = "user1234";
+if(userName == "user1234") {
+	console.log("Welcome to the site") ;
+}
 
-total = total + 5;
-// store result back in variable
-total += 5;
-// add and assign operator - adds then assigns new value
-var count 0
-// variable starts at 0 in this instance
-count +=1;
-// count +=1; would increase the variable count by 1
-++count;
-// the increment operator adds 1 to variable
-// ++ before variable is a prefix operator, when this is used it adds increment to the variable then it can be used 
-// ++ after variable is a postfix operator, when this is used the original variable will be used then increment after
-// if ++ used after the variable that variable can be used in next
+var age = 35, 
+minAge = 18;
 
-1+1 *2;
-// order of operation - multiplication first
+if(age >= minAge) {
+	console.log("Welcome to the site");
+}
+// else statement
+else {
+	console.log("Sorry, too yong.");
+}
+var rand = Math.random();
 
-(1 + 1) *2;
-// order of operation - sum in brackets first then multiplication
+if (rand > 0.5) { // 50% of the time it will be yes and 50% of the time it will be no - random
+	console.log("Yes!, do it!")
+}
+else {
+	console.log("No! don't!");
+}
+// else if statements
+if(someCondition) {
+	doThis();
+}
+else if (anotherCondition) {
+	doThat();
+}
+else {
+	doTheOther();
+}
+// type coercion are useful in if statements with undefined and null variables
 
-Math.max(5, 10);
-// math.max takes two or more numbers then returns the larger number
-Math.sqrt(49);
-// math.sqrt works out the square root of the number
-Math.round(3.6);
-// math.round rounds to the nearest whole number
-Math.random()
-// gives a random number between 0 and 1
-Math.random() * 100
-// multiplying math.random by a number gives a higher random number return
+var cost = 10,
+quantity;
+
+if(quantity) {
+	var total = cost * quantity // if quantity is any number besides 0 it will be true and execute
+}
+else {
+	console.log("quantity is not defined");  // if quantity is 0 it is false and will log this
+}
+// coercion rules - what will be what
+// undefined = false
+// null = false
+// 0 = false
+// any other number (including negative numbers) = true
+// "" = false
+// "any other string" = true
+// "false" is a non empty string and will become true
+
+// strict comparison operator (no coercion used) is === this is used always (best practice) because string number and an actual number can be true 5 == "5" this is a quirk
