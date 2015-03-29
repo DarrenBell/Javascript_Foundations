@@ -1,91 +1,32 @@
-// booleans are true or false values
-// operators
-// equals operator
-5 == 5;
-// true
-5 == 6;
-// false
-// not equals operator
-5 != 6;
-// true
-5 !=5;
-// false
-// greater than and less than operators
-6 > 5;
-// true
-5 < 4;
-// false
-// greater than can be combined with equals to
-5 >= 5;
-// true
-// can compare strings
-"rose" == "rose";
-// true
-"cat" == "dog";
-// false
-"cat" > "dog";
-// false - alphabetical comparison, dog is greater than cat as it comes after 'c', lowercase however beats uppercase
-if(someCondition) { // if true - only this will run if true
-	doThis(); // do this
-}
-else {
-	doThat(); // if false do this - only this will run if false
-}
-// if statement
-if(true) {
-	console.log("Hello World"); // will always evaluate to true
-}
-var userName = "user1234";
-if(userName == "user1234") {
-	console.log("Welcome to the site") ;
-}
+// strings
+// strings can hold any contextual data
+// strings are defined by enclosing any text in single or double quotes - no different with the quotations
+// if you want to use both single and double there's a few ways to get around this
+// you either use one or the other for the start and the other for the quote inside the string.
+var message = 'Joe says, "Hello."';
+// otherwise you can escape the quote
+var message = 'Joe\'s message is "Hello"';
+// using the backslash you can escape the quote
+var message - "Joe's message is \"Hello\".";
+// if you need to escape a backslash you need to put double - escape the escape
+// you can concatinate (plus operator) to add strings together
+var message1 = "Four score ";
+var message2 = "and seven years ago."
+message1 + message2
+// answer = Four score and seven years ago
+// can use += for strings
+// you can also use coercion
+// substring and substr lets you extract a sequence of characters within a string
+// substring () substring lets you pass in 2 numbers, starting with 0 and the second character is the last character you want
+var lang = "JavaScript";
+lang.substring(0, 4);
+// this would return Java, position 0 is the J and 4 is the second a
+// you can leave off the second number in substring for it to return all values after the first number
+// substr () works the same way however the 2nd number specifies how many numbers you want to get back.
+lang.substr(0, 4);
+// this would return Java also
+// you can also leave out the 2nd number with this
+// language.charAt returns character in that index number
+lang.charAt(4)
+// -1 means a character does not exist
 
-var age = 35, 
-minAge = 18;
-
-if(age >= minAge) {
-	console.log("Welcome to the site");
-}
-// else statement
-else {
-	console.log("Sorry, too yong.");
-}
-var rand = Math.random();
-
-if (rand > 0.5) { // 50% of the time it will be yes and 50% of the time it will be no - random
-	console.log("Yes!, do it!")
-}
-else {
-	console.log("No! don't!");
-}
-// else if statements
-if(someCondition) {
-	doThis();
-}
-else if (anotherCondition) {
-	doThat();
-}
-else {
-	doTheOther();
-}
-// type coercion are useful in if statements with undefined and null variables
-
-var cost = 10,
-quantity;
-
-if(quantity) {
-	var total = cost * quantity // if quantity is any number besides 0 it will be true and execute
-}
-else {
-	console.log("quantity is not defined");  // if quantity is 0 it is false and will log this
-}
-// coercion rules - what will be what
-// undefined = false
-// null = false
-// 0 = false
-// any other number (including negative numbers) = true
-// "" = false
-// "any other string" = true
-// "false" is a non empty string and will become true
-
-// strict comparison operator (no coercion used) is === this is used always (best practice) because string number and an actual number can be true 5 == "5" this is a quirk
