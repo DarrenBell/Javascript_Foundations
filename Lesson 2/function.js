@@ -9,7 +9,7 @@ function sayHello(name, useAlert) { // in this instance it will evaluate to fals
 		alert("Hello, " + name);
 	}
 	else {
-	console.log("Hello, " + name); // we are concatinating name onto the end of Hello.	
+	console.log("Hello, " + name); // we are concatenating name onto the end of Hello.	
 	} // if useAlert is false or evaluates to false it will use console.log
 }
 sayHello("Darren");  // using the word true after the comma makes the function true and use the alert
